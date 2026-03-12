@@ -107,7 +107,69 @@ chatbox.innerHTML+="<p><b>Micah AI:</b> I'm your AI assistant. Soon I'll be conn
 
 document.getElementById("userInput").value=""
 
+<section style="padding:60px">
+
+<h2>AI Caption Generator</h2>
+
+<input id="captionInput" placeholder="Describe your post..." style="padding:10px;width:60%">
+
+<button onclick="generateCaption()">Generate Caption</button>
+
+<p id="captionResult"></p>
+
+</section>
+
+<script>
+
+function generateCaption(){
+
+let text=document.getElementById("captionInput").value
+
+let captions=[
+"Living my best life ✨",
+"Moments like this matter most 💫",
+"Chasing dreams and catching vibes 🚀",
+"Energy speaks louder than words ⚡",
+"Just another step towards greatness 🔥"
+]
+
+let random=captions[Math.floor(Math.random()*captions.length)]
+
+document.getElementById("captionResult").innerText=random
+
 }
+
+</script><section style="padding:60px">
+
+<h2>AI Business Name Generator</h2>
+
+<input id="bizInput" placeholder="Enter business idea">
+
+<button onclick="generateName()">Generate Name</button>
+
+<p id="bizResult"></p>
+
+</section>
+
+<script>
+
+function generateName(){
+
+let names=[
+"NovaTech",
+"Micronova",
+"FutureFlow",
+"SkyLabs",
+"InnovaTech"
+]
+
+let random=names[Math.floor(Math.random()*names.length)]
+
+document.getElementById("bizResult").innerText=random
+
+}
+
+</script>
 
 </script>
 
