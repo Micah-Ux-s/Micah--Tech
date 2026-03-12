@@ -1,214 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+<div style="position:fixed;bottom:20px;right:20px;width:300px;background:#1e293b;border-radius:10px;padding:15px">
 
-<head>
+<h3>Micah AI</h3>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div id="chatbox" style="height:200px;overflow:auto;background:#0f172a;padding:10px;border-radius:6px;margin-bottom:10px"></div>
 
-<title>Micah Tech</title>
+<input id="userInput" placeholder="Ask Micah AI..." style="width:100%;padding:10px;border-radius:6px;border:none">
 
-<style>
-
-body{
-margin:0;
-font-family:Arial;
-background:#0f172a;
-color:white;
-}
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:black;
-}
-
-.logo{
-font-size:24px;
-color:#38bdf8;
-font-weight:bold;
-}
-
-nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
-}
-
-.hero{
-text-align:center;
-padding:140px 20px;
-animation:fadeIn 2s;
-}
-
-.hero h1{
-font-size:55px;
-color:#38bdf8;
-}
-
-.hero p{
-font-size:20px;
-}
-
-.button{
-margin-top:30px;
-display:inline-block;
-padding:14px 30px;
-background:#38bdf8;
-color:black;
-font-weight:bold;
-border-radius:6px;
-text-decoration:none;
-}
-
-.section{
-padding:80px 20px;
-text-align:center;
-}
-
-.services{
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
-margin-top:40px;
-}
-
-.card{
-background:#1e293b;
-padding:30px;
-width:250px;
-border-radius:10px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:scale(1.05);
-}
-
-input, textarea{
-
-width:80%;
-padding:12px;
-margin:10px;
-border-radius:6px;
-border:none;
-
-}
-
-button{
-padding:12px 25px;
-background:#38bdf8;
-border:none;
-border-radius:6px;
-font-weight:bold;
-cursor:pointer;
-}
-
-footer{
-background:black;
-padding:20px;
-text-align:center;
-margin-top:40px;
-}
-
-@keyframes fadeIn{
-
-from{opacity:0;transform:translateY(20px);}
-to{opacity:1;transform:translateY(0);}
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">Micah Tech</div>
-
-<nav>
-
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<h1>Micah Tech 🚀</h1>
-
-<p>AI • Websites • Digital Innovation</p>
-
-<a class="button">Get Started</a>
-
-</section>
-
-<section class="section" id="services">
-
-<h2>Our Services</h2>
-
-<div class="services">
-
-<div class="card">
-
-<h3>Website Development</h3>
-
-<p>Modern websites built for businesses and creators.</p>
+<button onclick="sendMessage()" style="margin-top:10px;width:100%;padding:10px;background:#38bdf8;border:none;border-radius:6px;font-weight:bold">Send</button>
 
 </div>
 
-<div class="card">
+<script>
 
-<h3>AI Tools</h3>
+function sendMessage(){
 
-<p>Smart tools to automate tasks and boost productivity.</p>
+let input = document.getElementById("userInput").value
+let chatbox = document.getElementById("chatbox")
 
-</div>
+chatbox.innerHTML += "<p><b>You:</b> " + input + "</p>"
 
-<div class="card">
+let reply = "Micah AI: Thanks for your message. I'm learning and will soon give smarter answers!"
 
-<h3>Tech Consulting</h3>
+chatbox.innerHTML += "<p>" + reply + "</p>"
 
-<p>Helping businesses grow with technology.</p>
+document.getElementById("userInput").value=""
 
-</div>
+}
 
-</div>
-
-</section>
-
-<section class="section" id="contact">
-
-<h2>Contact Micah</h2>
-
-<form>
-
-<input type="text" placeholder="Your Name"><br>
-
-<input type="email" placeholder="Your Email"><br>
-
-<textarea placeholder="Your Message"></textarea><br>
-
-<button>Send Message</button>
-
-</form>
-
-</section>
-
-<footer>
-
-<p>© 2026 Micah Tech</p>
-
-</footer>
-
-</body>
-
-</html>
+</script>
