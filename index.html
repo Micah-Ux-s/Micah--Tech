@@ -1,12 +1,95 @@
-<div style="position:fixed;bottom:20px;right:20px;width:300px;background:#1e293b;border-radius:10px;padding:15px">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Micah Tech</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+}
+
+header{
+background:black;
+padding:20px;
+font-size:24px;
+color:#38bdf8;
+}
+
+.hero{
+padding:120px 20px;
+}
+
+button{
+padding:12px 25px;
+background:#38bdf8;
+border:none;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
+
+#chat-container{
+position:fixed;
+bottom:20px;
+right:20px;
+width:300px;
+background:#1e293b;
+padding:15px;
+border-radius:10px;
+}
+
+#chatbox{
+height:180px;
+overflow:auto;
+background:#0f172a;
+padding:10px;
+margin-bottom:10px;
+border-radius:6px;
+}
+
+input{
+width:100%;
+padding:10px;
+border-radius:6px;
+border:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>Micah Tech 🚀</header>
+
+<section class="hero">
+
+<h1>Welcome to Micah Tech</h1>
+
+<p>AI • Web Development • Digital Innovation</p>
+
+<button>Explore</button>
+
+</section>
+
+<div id="chat-container">
 
 <h3>Micah AI</h3>
 
-<div id="chatbox" style="height:200px;overflow:auto;background:#0f172a;padding:10px;border-radius:6px;margin-bottom:10px"></div>
+<div id="chatbox"></div>
 
-<input id="userInput" placeholder="Ask Micah AI..." style="width:100%;padding:10px;border-radius:6px;border:none">
+<input id="userInput" placeholder="Ask Micah AI...">
 
-<button onclick="sendMessage()" style="margin-top:10px;width:100%;padding:10px;background:#38bdf8;border:none;border-radius:6px;font-weight:bold">Send</button>
+<button onclick="sendMessage()">Send</button>
 
 </div>
 
@@ -14,17 +97,20 @@
 
 function sendMessage(){
 
-let input = document.getElementById("userInput").value
-let chatbox = document.getElementById("chatbox")
+let input=document.getElementById("userInput").value
 
-chatbox.innerHTML += "<p><b>You:</b> " + input + "</p>"
+let chatbox=document.getElementById("chatbox")
 
-let reply = "Micah AI: Thanks for your message. I'm learning and will soon give smarter answers!"
+chatbox.innerHTML+="<p><b>You:</b> "+input+"</p>"
 
-chatbox.innerHTML += "<p>" + reply + "</p>"
+chatbox.innerHTML+="<p><b>Micah AI:</b> I'm your AI assistant. Soon I'll be connected to real AI!</p>"
 
 document.getElementById("userInput").value=""
 
 }
 
 </script>
+
+</body>
+
+</html>
