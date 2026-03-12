@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><a href="#ai-tools">
 <button>Explore</button>
+  <style>
 </a>
 
 <head>
@@ -12,169 +13,46 @@
 <style>
 
 body{
+font-family: Arial, sans-serif;
 margin:0;
-font-family:Arial;
-background:#0f172a;
+padding:0;
+background:#0b1c2c;
 color:white;
 text-align:center;
 }
 
-header{
-background:black;
-padding:20px;
-font-size:24px;
-color:#38bdf8;
-}
-
 .hero{
-padding:120px 20px;
+padding:80px 20px;
 }
 
-button{
-padding:12px 25px;
-background:#38bdf8;
-border:none;
-border-radius:6px;
-font-weight:bold;
-cursor:pointer;
-}
-
-#chat-container{
-position:fixed;
-bottom:20px;
-right:20px;
-width:300px;
-background:#1e293b;
-padding:15px;
+.ai-box{
+width:90%;
+max-width:500px;
+margin:40px auto;
+padding:20px;
+background:#1f2f44;
 border-radius:10px;
 }
 
-#chatbox{
-height:180px;
-overflow:auto;
-background:#0f172a;
-padding:10px;
+.chat-box{
+height:200px;
+background:#0b1c2c;
+border-radius:8px;
 margin-bottom:10px;
-border-radius:6px;
 }
 
 input{
-width:100%;
+width:70%;
 padding:10px;
-border-radius:6px;
 border:none;
+border-radius:6px;
 }
 
-</style>
-
-</head>
-
-<body>
-
-<header>Micah Tech 🚀</header>
-
-<section class="hero">
-
-<h1>Welcome to Micah Tech</h1>
-
-<p>AI • Web Development • Digital Innovation</p>
-
-<button>Explore</button>
-
-</section>
-
-<div id="chat-container">
-
-<h3>Micah AI</h3>
-
-<div id="chatbox"></div>
-
-<input id="userInput" placeholder="Ask Micah AI...">
-
-<button onclick="sendMessage()">Send</button>
-
-</div>
-
-<script>
-
-function sendMessage(){
-
-let input=document.getElementById("userInput").value
-
-let chatbox=document.getElementById("chatbox")
-
-chatbox.innerHTML+="<p><b>You:</b> "+input+"</p>"
-
-chatbox.innerHTML+="<p><b>Micah AI:</b> I'm your AI assistant. Soon I'll be connected to real AI!</p>"
-
-document.getElementById("userInput").value=""
-
-<section style="padding:60px">
-
-<h2>AI Caption Generator</h2>
-
-<input id="captionInput" placeholder="Describe your post..." style="padding:10px;width:60%">
-
-<button onclick="generateCaption()">Generate Caption</button>
-
-<p id="captionResult"></p>
-
-</section>
-
-<script>
-
-function generateCaption(){
-
-let text=document.getElementById("captionInput").value
-
-let captions=[
-"Living my best life ✨",
-"Moments like this matter most 💫",
-"Chasing dreams and catching vibes 🚀",
-"Energy speaks louder than words ⚡",
-"Just another step towards greatness 🔥"
-]
-
-let random=captions[Math.floor(Math.random()*captions.length)]
-
-document.getElementById("captionResult").innerText=random
-
+button{
+padding:10px 20px;
+border:none;
+background:#4db8ff;
+color:white;
+border-radius:6px;
+cursor:pointer;
 }
-
-</script><section style="padding:60px">
-
-<h2>AI Business Name Generator</h2>
-
-<input id="bizInput" placeholder="Enter business idea">
-
-<button onclick="generateName()">Generate Name</button>
-
-<p id="bizResult"></p>
-
-</section>
-
-<script>
-
-function generateName(){
-
-let names=[
-"NovaTech",
-"Micronova",
-"FutureFlow",
-"SkyLabs",
-"InnovaTech"
-]
-
-let random=names[Math.floor(Math.random()*names.length)]
-
-document.getElementById("bizResult").innerText=random
-
-}
-
-</script>
-
-</script>
-
-</body>
-
-</html>
