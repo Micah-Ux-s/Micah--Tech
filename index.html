@@ -1,37 +1,45 @@
 <!DOCTYPE html>
-<html lang="en"><a href="#ai-tools">
-<button>Explore</button>
-  <style>
-</a>
-
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Micah Tech</title>
 
 <style>
 
 body{
-font-family: Arial, sans-serif;
+font-family: Arial;
 margin:0;
-padding:0;
 background:#0b1c2c;
 color:white;
 text-align:center;
 }
 
+header{
+background:black;
+padding:20px;
+font-size:24px;
+}
+
 .hero{
-padding:80px 20px;
+padding:60px 20px;
+}
+
+.explore-btn{
+background:#4db8ff;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+color:white;
+font-size:16px;
+cursor:pointer;
 }
 
 .ai-box{
 width:90%;
 max-width:500px;
 margin:40px auto;
-padding:20px;
 background:#1f2f44;
-border-radius:10px;
+padding:20px;
+border-radius:12px;
 }
 
 .chat-box{
@@ -44,15 +52,51 @@ margin-bottom:10px;
 input{
 width:70%;
 padding:10px;
-border:none;
 border-radius:6px;
+border:none;
 }
 
-button{
-padding:10px 20px;
-border:none;
+.send-btn{
 background:#4db8ff;
-color:white;
+border:none;
+padding:10px 20px;
 border-radius:6px;
+color:white;
 cursor:pointer;
 }
+
+</style>
+</head>
+
+<body>
+
+<header>
+Micah Tech 🚀
+</header>
+
+<div class="hero">
+
+<h1>Welcome to Micah Tech</h1>
+
+<p>AI • Web Development • Digital Innovation</p>
+
+<button class="explore-btn">Explore</button>
+
+</div>
+
+<div class="ai-box">
+
+<h2>Micah AI</h2>
+
+<div class="chat-box"></div>
+
+<input placeholder="Ask Micah AI...">
+
+<br><br>
+
+<button class="send-btn">Send</button>
+
+</div>
+
+</body>
+</html>
